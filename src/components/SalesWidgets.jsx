@@ -20,23 +20,23 @@ const SalesWidgets = React.memo(() => {
   return (
     <div>
       <div className="flex gap-[2rem] flex-col lg:flex-row flex-wrap">
-        <div className="h-[240px] w-full lg:w-[270px] sm:w-[60%] p-4 border-[1px] border-[#000] flex flex-col gap-2 rounded-[8px]">
+        <div className="h-[240px] w-full 2xl:w-[270px]  p-4 border-[1px] border-[#000] flex flex-col gap-2 rounded-[8px]">
           <span className="text-[14px] font-normal">Today's Sales</span>
           <span className="text-[20px] font-medium">₦1,652.50</span>
         </div>
-        <div className="h-[240px] w-full lg:w-[300px] sm:w-[60%]  p-4  bg-[#000] flex flex-col gap-2 rounded-[8px] text-[#fff]">
+        <div className="h-[240px] w-full 2xl:w-[300px]   p-4  bg-[#000] flex flex-col gap-2 rounded-[8px] text-[#fff]">
           <span className="text-[14px] font-normal">24 Aug - 01 Sep 21</span>
           <MiniGraph salesData={weekyData} />
           <span className="text-[14px] font-normal">This week</span>
           <span className="text-[20px] font-medium">₦1,652.50</span>
         </div>
-        <div className="h-[240px] w-full lg:w-[300px] sm:w-[60%] p-4 border-[1px] border-[#000] flex flex-col gap-2 rounded-[8px] text-[#000]">
+        <div className="h-[240px] w-full 2xl:w-[300px]  p-4 border-[1px] border-[#000] flex flex-col gap-2 rounded-[8px] text-[#000]">
           <span className="text-[14px] font-normal">24 Aug - 01 Sep 21</span>
           <MiniGraph salesData={thisMonthyData} />
           <span className="text-[14px] font-normal">This month</span>
           <span className="text-[20px] font-medium">₦1,652.50</span>
         </div>
-        <div className="h-[240px] w-full lg:w-[300px] sm:w-[60%]  p-4 border-[1px] border-[#000] flex flex-col gap-2 rounded-[8px] text-[#000]">
+        <div className="h-[240px] w-full 2xl:w-[300px]   p-4 border-[1px] border-[#000] flex flex-col gap-2 rounded-[8px] text-[#000]">
           <span className="text-[14px] font-normal">24 Aug - 01 Sep 21</span>
           <MiniGraph salesData={lastMonthData} />
           <span className="text-[14px] font-normal">Last month</span>
