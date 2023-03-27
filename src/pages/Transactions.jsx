@@ -86,6 +86,7 @@ function Transactions() {
             aria-label="simple table"
             sx={{
               minWidth: 650,
+              fontFamily: "Inter",
             }}
           >
             <TableHead className="bg-white">
@@ -100,10 +101,9 @@ function Transactions() {
                   "Status",
                 ].map((head) => (
                   <TableCell
-                    style={{
-                      color: "black",
-                      fontWeight: "700",
-                      fontFamily: "Quicksand",
+                    sx={{
+                      fontFamily: "Inter",
+                      fontWeight: "bold",
                     }}
                     key={head}
                     align="left"
@@ -122,13 +122,62 @@ function Transactions() {
                     className="cursor-pointer  bg-[#fff] hover:bg-[#e6e6e673]"
                     key={row.transaction_id}
                   >
-                    <TableCell align="left">{row.transaction_id}</TableCell>
-                    <TableCell align="left">{row.source}</TableCell>
-                    <TableCell align="left">{row.customer_name}</TableCell>
-                    <TableCell align="left">{row.customer_email}</TableCell>
-                    <TableCell align="left">{row.amount}</TableCell>
-                    <TableCell align="left">{row.request_date}</TableCell>
-                    <TableCell align="left">{row.status}</TableCell>
+                    <TableCell
+                      sx={{
+                        fontFamily: "Inter",
+                      }}
+                      align="left"
+                    >
+                      {row.transaction_id}
+                    </TableCell>
+                    <TableCell
+                      sx={{
+                        fontFamily: "Inter",
+                      }}
+                      align="left"
+                    >
+                      {row.source}
+                    </TableCell>
+                    <TableCell
+                      sx={{
+                        fontFamily: "Inter",
+                      }}
+                      align="left"
+                    >
+                      {row.customer_name}
+                    </TableCell>
+                    <TableCell
+                      sx={{
+                        fontFamily: "Inter",
+                      }}
+                      align="left"
+                    >
+                      {row.customer_email}
+                    </TableCell>
+                    <TableCell
+                      sx={{
+                        fontFamily: "Inter",
+                      }}
+                      align="left"
+                    >
+                      {row.amount}
+                    </TableCell>
+                    <TableCell
+                      sx={{
+                        fontFamily: "Inter",
+                      }}
+                      align="left"
+                    >
+                      {row.request_date}
+                    </TableCell>
+                    <TableCell
+                      sx={{
+                        fontFamily: "Inter",
+                      }}
+                      align="left"
+                    >
+                      {row.status}
+                    </TableCell>
                   </TableRow>
                 ))}
             </TableBody>
@@ -140,6 +189,7 @@ function Transactions() {
           sx={{
             display: "flex",
             justifyContent: "end",
+            fontFamily: "Inter",
           }}
           count={(handleSearch()?.length / 4).toFixed(0)}
           className="p-[20px] w-full flex justify-center font-quicksand"
