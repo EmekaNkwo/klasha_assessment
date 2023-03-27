@@ -1,0 +1,10 @@
+export { default as dashboard } from "./dashboard.svg";
+export { default as exchange } from "./exchange.svg";
+export { default as checkout } from "./checkout.svg";
+export { default as payment } from "./payment.svg";
+export { default as wire } from "./wire.svg";
+export { default as analytics } from "./analytics.svg";
+export { default as marketing } from "./marketing.svg";
+export { default as transactions } from "./transaction.svg";
+export { default as wallet } from "./wallet.svg";
+export { default as Logo } from "./klasha__logo.svg";
