@@ -41,7 +41,7 @@ function Dashboard() {
         <h3 className="text-[20px] font-medium">Sales Overview</h3>
 
         <SalesWidgets />
-        <div className="flex gap-2 my-5 w-[80%] lg:flex-row flex-col">
+        <div className="flex gap-2 my-5  2xl:flex-row flex-col">
           <div className="flex flex-col">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3 ">
@@ -91,8 +91,8 @@ function Dashboard() {
             <MainGraph />
           </div>
           <div className="flex mt-[3.3rem]">
-            <div className="w-[305px] h-[284px] flex flex-col justify-between bg-[#EF2C5A] rounded-[8px] p-4">
-              <span className="w-[220px] leading-[34px] text-[20px] font-medium text-[#fff]">
+            <div className="2xl:w-[305px] 2xl:h-[284px] w-full items-center  flex 2xl:flex-col justify-between bg-[#EF2C5A] rounded-[8px] p-4">
+              <span className="2xl:w-[220px] w-[50%] leading-[34px] text-[20px]  font-medium text-[#fff]">
                 KlashaWire - send money to businesses globally from Africa
               </span>
               <FilledButton
