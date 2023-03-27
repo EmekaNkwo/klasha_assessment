@@ -24,7 +24,7 @@ function Sidebar() {
 
         <div className="flex flex-col gap-[2.5rem] mt-[1.4rem]">
           <div className="flex mx-[1rem] flex-col gap-1 ">
-            <span className="">Main Pages</span>
+            <span className="text-[#8D8D8D] text-[14px]">Main Pages</span>
             {mainNavlinks.map((link) => (
               <NavLink
                 key={link.name}
@@ -41,7 +41,7 @@ function Sidebar() {
             ))}
           </div>
           <div className="flex mx-[1rem] flex-col gap-1">
-            <span>Account Payments</span>
+            <span className="text-[#8D8D8D] text-[14px]">Account Payments</span>
 
             {subNavlinks.map((link) => (
               <NavLink
@@ -59,7 +59,7 @@ function Sidebar() {
             ))}
           </div>
           <div className="flex mx-[1rem] flex-col gap-1">
-            <span>Send Payments</span>
+            <span className="text-[#8D8D8D] text-[14px]">Send Payments</span>
 
             {thirdNavlinks.map((link) => (
               <NavLink
