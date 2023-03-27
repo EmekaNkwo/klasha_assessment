@@ -71,7 +71,6 @@ function Transactions() {
         <TableContainer
           component={Paper}
           sx={{
-            minWidth: 650,
             boxShadow: "none",
           }}
         >
