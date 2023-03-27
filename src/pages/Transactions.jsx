@@ -10,10 +10,11 @@ import {
   Divider,
 } from "@mui/material";
 import React, { useMemo, useState } from "react";
-import { BsFilter, BsSearch } from "react-icons/bs";
+import { BsFilter, BsSearch, BsThreeDotsVertical } from "react-icons/bs";
 import { OutlineButton } from "../shared/components/CustomButtons";
 import { InputTextField } from "../shared/components/InputField";
 import { tableData } from "../shared/constants";
+import useMediaQuery from "../shared/hooks/useMediaQuery";
 
 function Transactions() {
   const [search, setSearch] = useState("");
@@ -29,6 +30,8 @@ function Transactions() {
       );
     };
   }, [searchItem]);
+
+  const isSmallScreen = useMediaQuery("(max-width: 1023px)");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -52,22 +55,25 @@ function Transactions() {
             value={search}
             onChange={(e) => setSearch(e.target.value.toLowerCase())}
           />
-
-          <div className="flex gap-2 ">
-            <OutlineButton
-              endIcon={<BsFilter />}
-              title="Filter"
-              styles={{
-                color: "#000",
-              }}
-            />
-            <OutlineButton
-              title="Export"
-              styles={{
-                color: "#000",
-              }}
-            />
-          </div>
+          {isSmallScreen ? (
+            <BsThreeDotsVertical className="ml-2 cursor-pointer" />
+          ) : (
+            <div className="flex gap-2 ">
+              <OutlineButton
+                endIcon={<BsFilter />}
+                title="Filter"
+                styles={{
+                  color: "#000",
+                }}
+              />
+              <OutlineButton
+                title="Export"
+                styles={{
+                  color: "#000",
+                }}
+              />
+            </div>
+          )}
         </div>
         <Divider />
         <TableContainer
