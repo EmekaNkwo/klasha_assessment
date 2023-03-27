@@ -91,7 +91,7 @@ function Dashboard() {
             <MainGraph />
           </div>
           <div className="flex mt-[3.3rem]">
-            <div className="2xl:w-[305px] 2xl:h-[284px] w-full items-center  flex 2xl:flex-col justify-between bg-[#EF2C5A] rounded-[8px] p-4">
+            <div className="2xl:w-[305px] 2xl:h-[284px] w-full items-center 2xl:items-start  flex 2xl:flex-col justify-between bg-[#EF2C5A] rounded-[8px] p-4">
               <span className="2xl:w-[220px] w-[50%] leading-[34px] text-[20px]  font-medium text-[#fff]">
                 KlashaWire - send money to businesses globally from Africa
               </span>
