@@ -8,6 +8,7 @@ import {
   TableHead,
   Pagination,
   Divider,
+  IconButton,
 } from "@mui/material";
 import React, { useMemo, useState } from "react";
 import { BsFilter, BsSearch, BsThreeDotsVertical } from "react-icons/bs";
@@ -56,7 +57,9 @@ function Transactions() {
             onChange={(e) => setSearch(e.target.value.toLowerCase())}
           />
           {isSmallScreen ? (
-            <BsThreeDotsVertical className="ml-2 cursor-pointer" />
+            <IconButton>
+              <BsThreeDotsVertical className=" cursor-pointer" />
+            </IconButton>
           ) : (
             <div className="flex gap-2 ">
               <OutlineButton
