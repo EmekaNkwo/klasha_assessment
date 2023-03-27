@@ -9,7 +9,7 @@ import {
   Pagination,
   Divider,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { BsFilter, BsSearch } from "react-icons/bs";
 import { OutlineButton } from "../shared/components/CustomButtons";
 import { InputTextField } from "../shared/components/InputField";
@@ -20,13 +20,15 @@ function Transactions() {
   const [searchItem, setSearchItem] = useState("");
   const [page, setPage] = useState(1);
 
-  const handleSearch = () => {
-    return tableData.filter(
-      (data) =>
-        data.customer_name.toLowerCase().includes(searchItem) ||
-        data.customer_email.toLowerCase().includes(searchItem)
-    );
-  };
+  const handleSearch = useMemo(() => {
+    return () => {
+      return tableData.filter(
+        (data) =>
+          data.customer_name.toLowerCase().includes(searchItem) ||
+          data.customer_email.toLowerCase().includes(searchItem)
+      );
+    };
+  }, [searchItem]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
